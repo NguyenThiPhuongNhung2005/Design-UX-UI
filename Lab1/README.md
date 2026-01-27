@@ -1,8 +1,8 @@
 # PetCare (Lab1)
 
-Dự án giao diện website PetCare (bài tập UI/UX) — trang web tĩnh HTML/CSS.
+PetCare website UI/UX assignment — a static HTML/CSS website.
 
-# Cấu trúc
+# Structure
 
 - Lab1/
   - index.html
@@ -11,10 +11,10 @@ Dự án giao diện website PetCare (bài tập UI/UX) — trang web tĩnh HTML
   - services.html
   - img/
 
-# Cách chạy
-1. Mở thư mục `Lab1/`.
-2. Mở file `index.html` bằng trình duyệt (double-click) hoặc dùng Live Server trong VS Code.
+# How to run
+1. Open the `Lab1/` folder.
+2. Open `index.html` in a browser (double-click) or run it via VS Code Live Server.
 
-# Ghi chú
-- Dự án không cần backend.
-- File `.gitignore` đã cấu hình để bỏ qua `.venv/` và một số file hệ thống.
+# Notes
+- No backend is required.
+- The `.gitignore` file is configured to exclude `.venv/` and common OS/editor files.
