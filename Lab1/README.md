@@ -1,10 +1,10 @@
-# PetCare
+# PetCare (Lab1)
 
 Dự án giao diện website PetCare (bài tập UI/UX) — trang web tĩnh HTML/CSS.
 
 # Cấu trúc
 
-- Petcare
+- Lab1/
   - index.html
   - styles.css
   - product.html
@@ -12,7 +12,7 @@ Dự án giao diện website PetCare (bài tập UI/UX) — trang web tĩnh HTML
   - img/
 
 # Cách chạy
-1. Mở thư mục `Petcare/`.
+1. Mở thư mục `Lab1/`.
 2. Mở file `index.html` bằng trình duyệt (double-click) hoặc dùng Live Server trong VS Code.
 
 # Ghi chú
