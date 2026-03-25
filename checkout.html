@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thanh toán — PetCare T</title>
+  <meta name="description" content="Thanh toán dịch vụ PetCare T (demo): thông tin khách hàng và xác nhận đơn." />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body id="top">
+  <div class="topbar py-2 border-bottom">
+    <div class="container d-flex flex-wrap gap-2 align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-2 small">
+        <span class="badge text-bg-success-subtle text-success-emphasis border border-success-subtle">Mở cửa</span>
+        <span class="text-secondary">8:00–20:00 (T2–CN)</span>
+      </div>
+      <div class="d-flex align-items-center gap-3 small">
+        <a class="link-secondary text-decoration-none" href="tel:+84000000000"><i class="bi bi-telephone"></i> +84 000 000 000</a>
+        <a class="link-secondary text-decoration-none" href="mailto:hello@petcare.local"><i class="bi bi-envelope"></i> hello@petcare.local</a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg bg-body sticky-top border-bottom">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <span class="brand-mark" aria-hidden="true"><i class="bi bi-heart-pulse-fill"></i></span>
+        <span class="fw-bold">PetCare T</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Mở menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Dịch vụ</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Về chúng tôi</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
+        </ul>
+
+        <div class="d-flex gap-2 ms-lg-3 mt-3 mt-lg-0">
+          <a class="btn btn-outline-secondary" href="cart.html">
+            <i class="bi bi-bag"></i> Giỏ hàng
+            <span class="cart-badge d-none" data-cart-count>0</span>
+          </a>
+          <a class="btn btn-primary active" aria-current="page" href="checkout.html"><i class="bi bi-credit-card"></i> Thanh toán</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="block page-hero">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <p class="eyebrow mb-2"><i class="bi bi-credit-card"></i> Thanh toán</p>
+          <h1 class="display-6 fw-bold">Xác nhận & hoàn tất</h1>
+          <p class="lead text-secondary mt-3">Demo thanh toán: xác nhận thông tin và bấm “Đặt dịch vụ”.</p>
+        </div>
+        <div class="col-lg-5">
+          <div class="page-hero-panel" role="img" aria-label="Ảnh minh hoạ thanh toán"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="block">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-7">
+            <div class="card card-soft">
+              <div class="card-body">
+                <h2 class="h5 fw-bold">Thông tin khách hàng</h2>
+
+                <form class="needs-validation" novalidate id="checkoutForm">
+                  <div class="row g-3 mt-1">
+                    <div class="col-md-6">
+                      <label class="form-label" for="cName">Họ tên</label>
+                      <input class="form-control" id="cName" autocomplete="name" required />
+                      <div class="invalid-feedback">Vui lòng nhập họ tên.</div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="cPhone">Số điện thoại</label>
+                      <input class="form-control" id="cPhone" inputmode="tel" autocomplete="tel" required />
+                      <div class="invalid-feedback">Vui lòng nhập số điện thoại.</div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="cEmail">Email</label>
+                      <input type="email" class="form-control" id="cEmail" autocomplete="email" required />
+                      <div class="invalid-feedback">Vui lòng nhập email hợp lệ.</div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="cMethod">Phương thức</label>
+                      <select class="form-select" id="cMethod" required>
+                        <option value="" selected disabled>Chọn...</option>
+                        <option>Thanh toán khi nhận (COD)</option>
+                        <option>Chuyển khoản</option>
+                        <option>Ví điện tử (demo)</option>
+                      </select>
+                      <div class="invalid-feedback">Vui lòng chọn phương thức.</div>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label" for="cNote">Ghi chú</label>
+                      <textarea class="form-control" id="cNote" rows="3" placeholder="Ghi giống/cân nặng hoặc yêu cầu thêm..."></textarea>
+                    </div>
+                  </div>
+
+                  <div class="alert alert-success mt-3 d-none" id="checkoutOk" role="status">
+                    Đặt dịch vụ thành công (demo). Cảm ơn bạn!
+                  </div>
+
+                  <div class="d-flex flex-wrap gap-2 mt-3">
+                    <button class="btn btn-primary" type="submit"><i class="bi bi-check2-circle"></i> Đặt dịch vụ</button>
+                    <a class="btn btn-outline-secondary" href="cart.html"><i class="bi bi-arrow-left"></i> Quay lại giỏ</a>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+
+            <div class="note mt-3">
+              <i class="bi bi-info-circle"></i>
+              <div>
+                <div class="fw-semibold">Gợi ý nâng cấp</div>
+                <div class="text-secondary">Nếu bạn muốn “thật” hơn: tích hợp MoMo/ZaloPay/Stripe hoặc tạo API backend để lưu đơn.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="sticky-card">
+              <div class="card card-soft">
+                <div class="card-body">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <h2 class="h5 fw-bold mb-0">Tóm tắt đơn</h2>
+                    <a class="small link-secondary text-decoration-none" href="cart.html">Chỉnh</a>
+                  </div>
+
+                  <div class="mt-3 d-grid gap-2" id="orderLines"></div>
+
+                  <hr class="my-3" />
+
+                  <div class="d-grid gap-2">
+                    <div class="d-flex justify-content-between">
+                      <span class="text-secondary">Tạm tính</span>
+                      <span class="fw-semibold" id="sumSubtotal">—</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span class="text-secondary">Phí dịch vụ</span>
+                      <span class="fw-semibold" id="sumShipping">—</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="fw-bold">Tổng cộng</span>
+                      <span class="h5 fw-bold mb-0" id="sumTotal">—</span>
+                    </div>
+                  </div>
+
+                  <div class="empty mt-3 d-none" id="emptyState">
+                    <div class="empty-icon"><i class="bi bi-bag-x"></i></div>
+                    <div>
+                      <div class="fw-semibold">Giỏ trống</div>
+                      <div class="text-secondary">Bạn chưa chọn dịch vụ nào.</div>
+                    </div>
+                  </div>
+
+                  <div class="mt-3" id="goShopWrap">
+                    <a class="btn btn-outline-secondary w-100" href="services.html"><i class="bi bi-grid"></i> Chọn dịch vụ</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center">
+        <div class="small text-secondary">© <span id="year"></span> PetCare T</div>
+        <div class="d-flex gap-3">
+          <a class="small link-secondary text-decoration-none" href="services.html"><i class="bi bi-grid"></i> Dịch vụ</a>
+          <a class="small link-secondary text-decoration-none" href="index.html#booking"><i class="bi bi-calendar2-check"></i> Đặt lịch</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/shop.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pages/checkout-page.js"></script>
+</body>
+</html>
