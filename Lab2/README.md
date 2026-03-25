@@ -20,4 +20,4 @@ Mobirise là công cụ kéo-thả. Trong phạm vi repo này mình không thể
 2) Thay block hero/services/pricing/testimonials/contact
 3) Copy nội dung/structure từ các trang HTML trong repo để khớp chủ đề PetCare
 
-> Nếu bạn gửi tên cửa hàng, địa chỉ, hotline thật, mình có thể thay vào toàn bộ site.
+
