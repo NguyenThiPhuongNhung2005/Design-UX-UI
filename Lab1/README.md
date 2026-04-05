@@ -1,5 +1,6 @@
 LAB1: MULTI-SPECIES PET CARE PLATFORM
 1. Executive Summary
+
 In the modern urban landscape, pet ownership has evolved beyond traditional cats and dogs to include exotic species such as reptiles, birds, and small mammals. However, a significant gap exists in the service market: a lack of specialized care protocols for diverse species.
 
 PetCare is a comprehensive web solution designed to bridge this gap. This project focuses on "Species-Aware Care," integrating service booking, specialized boarding, and a curated retail experience into a single, user-centric ecosystem.
