@@ -100,5 +100,6 @@ Environment: Optimized for high-performance rendering on modern browsers; compat
 Asset Management: Images are optimized ( / ) and scripts are deferred to ensure a high Lighthouse performance score..webp.jpg
 
 7. EVALUATION & CONCLUSION
+   
 PetCare T successfully combines the warmth of a pet spa with the efficiency of a modern e-commerce platform. By focusing on transparency (Price/Time) and professionalism (The 4-step process), the site serves as a perfect case study for high-converting UI/UX design in the service industry.
 
