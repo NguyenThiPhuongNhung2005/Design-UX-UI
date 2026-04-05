@@ -1,6 +1,8 @@
-Lab 3 — PawMart (Pet Shop Landing Page)
+PawMart (Pet Shop Landing Page)
 Description
-Lab 3 is a single-page landing page simulating the PawMart pet store. It features a responsive design built with Bootstrap 5. The project focuses on fundamental UI/UX layouts, including clear navigation, sectioned content, interactive forms, and common web interface components.
+PawMart is a single-page landing page simulating the PawMart pet store. It features a responsive design built with Bootstrap 5. The project focuses on fundamental UI/UX layouts, including clear navigation, sectioned content, interactive forms, and common web interface components.
+
+<img width="1907" height="1037" alt="image" src="https://github.com/user-attachments/assets/22a51135-e5db-4355-820d-d017de5d7740" />
 
 Technologies Used
 HTML5
