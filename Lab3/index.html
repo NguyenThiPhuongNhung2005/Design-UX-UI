@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Trang PetShop responsive làm bằng Bootstrap 5." />
+    <title>PawMart — Cửa Hàng Thú Cưng</title>
+
+    <!-- Bootstrap 5 (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-body">
+    <!-- Navbar (component: Navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="#top">PawMart</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#navOffcanvas"
+          aria-controls="navOffcanvas"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Desktop nav -->
+        <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarMain">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="#destinations">Thú cưng</a></li>
+            <li class="nav-item"><a class="nav-link" href="#packages">Sản phẩm</a></li>
+            <li class="nav-item"><a class="nav-link" href="#reviews">Đánh giá</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faq">Hỏi đáp</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Liên hệ</a></li>
+            <li class="nav-item ms-lg-2">
+              <a class="btn btn-light btn-sm" href="#contact">Nhắn tin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Offcanvas nav (component: Offcanvas) -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="navOffcanvas"
+      aria-labelledby="navOffcanvasLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="navOffcanvasLabel">PawMart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="d-grid gap-2">
+          <a class="btn btn-outline-primary" href="#destinations" data-bs-dismiss="offcanvas">Thú cưng</a>
+          <a class="btn btn-outline-primary" href="#packages" data-bs-dismiss="offcanvas">Sản phẩm</a>
+          <a class="btn btn-outline-primary" href="#reviews" data-bs-dismiss="offcanvas">Đánh giá</a>
+          <a class="btn btn-outline-primary" href="#faq" data-bs-dismiss="offcanvas">Hỏi đáp</a>
+          <a class="btn btn-primary" href="#contact" data-bs-dismiss="offcanvas">Liên hệ</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero (Grid + Buttons + Form controls) -->
+    <header id="top" class="hero text-white">
+      <div class="container py-5">
+        <div class="row align-items-center g-4 py-lg-3">
+          <div class="col-12 col-lg-7">
+            <p class="mb-2">
+              <span class="badge text-bg-warning">New</span>
+              <span class="ms-2">Khuyến mãi spa & phụ kiện tuần này</span>
+            </p>
+            <h1 class="display-5 fw-bold lh-sm">Mọi thứ cho thú cưng — gọn trong một nơi</h1>
+            <p class="lead opacity-90">
+              Demo PetShop 1 trang: xem thú cưng, mua đồ, và gửi yêu cầu tư vấn.
+            </p>
+
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="badge rounded-pill text-bg-light text-primary">Spa</span>
+              <span class="badge rounded-pill text-bg-light text-primary">Thức ăn</span>
+              <span class="badge rounded-pill text-bg-light text-primary">Phụ kiện</span>
+              <span class="badge rounded-pill text-bg-light text-primary">Nhận nuôi</span>
+            </div>
+
+            <div class="d-flex gap-2 flex-wrap">
+              <a class="btn btn-light" href="#packages">Xem sản phẩm</a>
+              <button
+                class="btn btn-outline-light"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#bookingModal"
+                data-trip-title="Consultation"
+              >
+                Yêu cầu nhanh
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-5">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h2 class="h5 card-title mb-3">Tìm nhanh</h2>
+
+                <form id="searchForm" class="row g-2">
+                  <div class="col-12">
+                    <label class="form-label" for="searchDestination">Danh mục</label>
+                    <select id="searchDestination" class="form-select" required>
+                      <option value="" selected disabled>Chọn...</option>
+                      <option>Chó</option>
+                      <option>Mèo</option>
+                      <option>Thức ăn</option>
+                      <option>Spa / Grooming</option>
+                    </select>
+                  </div>
+                  <div class="col-6">
+                    <label class="form-label" for="searchDate">Ngày dự kiến</label>
+                    <input id="searchDate" class="form-control" type="date" required />
+                  </div>
+                  <div class="col-6">
+                    <label class="form-label" for="searchGuests">Số lượng</label>
+                    <input id="searchGuests" class="form-control" type="number" min="1" value="1" required />
+                  </div>
+                  <div class="col-12 d-grid mt-2">
+                    <button class="btn btn-primary" type="submit">Tìm kiếm</button>
+                  </div>
+                  <div class="col-12">
+                    <p class="small text-muted mb-0">
+                      Demo — bấm gửi sẽ hiện thông báo.
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content section: Pets (Grid + Cards) -->
+    <section id="destinations" class="py-5">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-end gap-3 mb-4">
+          <div>
+            <h2 class="h3 mb-1 section-title">Thú cưng nổi bật</h2>
+            <p class="text-secondary mb-0">Những bé thân thiện đang chờ bạn ghé thăm.</p>
+          </div>
+          <a class="btn btn-outline-primary btn-sm" href="#packages">Xem sản phẩm</a>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow-sm border-0">
+              <img
+                class="card-img-top"
+                src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1200&q=60"
+                alt="Chó"
+                loading="lazy"
+              />
+              <div class="card-body">
+                <h3 class="h6 card-title mb-1">Milo</h3>
+                <p class="card-text text-secondary small mb-0">Chó • 2 tuổi • Năng động</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pt-0">
+                <button
+                  class="btn btn-primary btn-sm"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#bookingModal"
+                  data-trip-title="Gặp Milo (Chó)"
+                >
+                  Gửi yêu cầu
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow-sm border-0">
+              <img
+                class="card-img-top"
+                src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=1200&q=60"
+                alt="Mèo"
+                loading="lazy"
+              />
+              <div class="card-body">
+                <h3 class="h6 card-title mb-1">Luna</h3>
+                <p class="card-text text-secondary small mb-0">Mèo • 1 tuổi • Điềm</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pt-0">
+                <button
+                  class="btn btn-primary btn-sm"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#bookingModal"
+                  data-trip-title="Gặp Luna (Mèo)"
+                >
+                  Gửi yêu cầu
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow-sm border-0">
+              <img
+                class="card-img-top"
+                src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1200&q=60"
+                alt="Cún con"
+                loading="lazy"
+              />
+              <div class="card-body">
+                <h3 class="h6 card-title mb-1">Kiki</h3>
+                <p class="card-text text-secondary small mb-0">Chó • 5 tháng • Hiếu kỳ</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pt-0">
+                <button
+                  class="btn btn-primary btn-sm"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#bookingModal"
+                  data-trip-title="Gặp Kiki (Cún con)"
+                >
+                  Gửi yêu cầu
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow-sm border-0">
+              <img
+                class="card-img-top"
+                src="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?auto=format&fit=crop&w=1200&q=60"
+                alt="Mèo con"
+                loading="lazy"
+              />
+              <div class="card-body">
+                <h3 class="h6 card-title mb-1">Mochi</h3>
+                <p class="card-text text-secondary small mb-0">Mèo • 4 tháng • Dễ thương</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pt-0">
+                <button
+                  class="btn btn-primary btn-sm"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#bookingModal"
+                  data-trip-title="Gặp Mochi (Mèo con)"
+                >
+                  Gửi yêu cầu
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content section: Products (Carousel + Cards + Indicators) -->
+    <section id="packages" class="py-5 bg-body-tertiary">
+      <div class="container">
+        <div class="row align-items-end mb-3">
+          <div class="col-12 col-lg-8">
+            <h2 class="h3 mb-1 section-title">Sản phẩm bán chạy</h2>
+            <p class="text-secondary mb-0">Vuốt trên điện thoại, bấm mũi tên trên máy tính.</p>
+          </div>
+          <div class="col-12 col-lg-4 text-lg-end mt-2 mt-lg-0">
+            <span class="small text-secondary">Mẹo: bấm chọn để điền sẵn yêu cầu.</span>
+          </div>
+        </div>
+
+        <div id="packageCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#packageCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#packageCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#packageCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row g-3">
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <h3 class="h6 card-title mb-1">Thức ăn chó cao cấp • 2kg</h3>
+                        <span class="badge text-bg-success">Giảm</span>
+                      </div>
+                      <p class="small text-secondary mb-3">Giàu đạm • Lông mượt</p>
+                      <ul class="small mb-3">
+                        <li>Khuyên dùng bởi bác sĩ thú y</li>
+                        <li>Không phẩm màu nhân tạo</li>
+                        <li>Phù hợp chó trưởng thành</li>
+                      </ul>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="fw-semibold">Từ 290,000₫</span>
+                        <button
+                          class="btn btn-primary btn-sm"
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#bookingModal"
+                          data-trip-title="Thức ăn chó cao cấp • 2kg"
+                        >
+                          Chọn
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
+                  <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <h3 class="h6 card-title mb-1">Cát vệ sinh mèo • 10L</h3>
+                        <span class="badge text-bg-info">Bán chạy</span>
+                      </div>
+                      <p class="small text-secondary mb-3">Ít bụi • Khử mùi</p>
+                      <ul class="small mb-3">
+                        <li>Vón nhanh</li>
+                        <li>Dễ dọn</li>
+                        <li>Hương thơm nhẹ</li>
+                      </ul>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="fw-semibold">Từ 160,000₫</span>
+                        <button
+                          class="btn btn-primary btn-sm"
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#bookingModal"
+                          data-trip-title="Cát vệ sinh mèo • 10L"
+                        >
+                          Chọn
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-lg-4 d-none d-lg-block">
+                  <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <h3 class="h6 card-title mb-1">Combo Spa</h3>
+                        <span class="badge text-bg-warning">Spa</span>
+                      </div>
+                      <p class="small text-secondary mb-3">Tắm + cắt móng + vệ sinh tai</p>
+                      <ul class="small mb-3">
+                        <li>Dành cho thú cỡ nhỏ/vừa</li>
+                        <li>Dầu gội dịu nhẹ</li>
+                        <li>Cần đặt lịch</li>
+                      </ul>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="fw-semibold">Từ 199,000₫</span>
+                        <button
+                          class="btn btn-primary btn-sm"
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#bookingModal"
+                          data-trip-title="Combo Spa"
+                        >
+                          Chọn
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row g-3">
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                      <h3 class="h6 card-title mb-1">Bộ đồ chơi cho chó</h3>
+                      <p class="small text-secondary mb-3">Gặm nhấm + bóng kêu</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="fw-semibold">Từ 120,000₫</span>
+                        <button
+                          class="btn btn-primary btn-sm"
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#bookingModal"
+                          data-trip-title="Bộ đồ chơi cho chó"
+                        >
+                          Chọn
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
+                  <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                      <h3 class="h6 card-title mb-1">Snack cho mèo</h3>
+                      <p class="small text-secondary mb-3">Mềm • Vị cá hồi</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="fw-semibold">Từ 65,000₫</span>
+                        <button
+                          class="btn btn-primary btn-sm"
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#bookingModal"
+                          data-trip-title="Snack cho mèo"
+                        >
+                          Chọn
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-lg-4 d-none d-lg-block">
+                  <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                      <h3 class="h6 card-title mb-1">Sữa tắm thú cưng</h3>
+                      <p class="small text-secondary mb-3">Dịu nhẹ • Da nhạy cảm</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="fw-semibold">Từ 89,000₫</span>
+                        <button
+                          class="btn btn-primary btn-sm"
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#bookingModal"
+                          data-trip-title="Sữa tắm thú cưng"
+                        >
+                          Chọn
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row g-3">
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                      <h3 class="h6 card-title mb-1">Dây dắt + yếm</h3>
+                      <p class="small text-secondary mb-3">Êm • Phản quang</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="fw-semibold">Từ 150,000₫</span>
+                        <button
+                          class="btn btn-primary btn-sm"
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#bookingModal"
+                          data-trip-title="Dây dắt + yếm"
+                        >
+                          Chọn
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
+                  <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                      <h3 class="h6 card-title mb-1">Nệm cho thú cưng</h3>
+                      <p class="small text-secondary mb-3">Mềm • Áo bọc giặt được</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="fw-semibold">Từ 220,000₫</span>
+                        <button
+                          class="btn btn-primary btn-sm"
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#bookingModal"
+                          data-trip-title="Nệm cho thú cưng"
+                        >
+                          Chọn
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-lg-4 d-none d-lg-block">
+                  <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                      <h3 class="h6 card-title mb-1">Kềm cắt móng</h3>
+                      <p class="small text-secondary mb-3">An toàn • Dễ cầm</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="fw-semibold">Từ 49,000₫</span>
+                        <button
+                          class="btn btn-primary btn-sm"
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#bookingModal"
+                          data-trip-title="Kềm cắt móng"
+                        >
+                          Chọn
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#packageCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Trước</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#packageCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Sau</span>
+          </button>
+        </div>
+
+        <!-- Pagination (component: Pagination) -->
+        <nav class="mt-4" aria-label="Trang sản phẩm">
+          <ul class="pagination justify-content-center mb-0">
+            <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Trước</a></li>
+            <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Sau</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Reviews (Carousel) -->
+    <section id="reviews" class="py-5">
+      <div class="container">
+        <div class="row mb-3 align-items-end">
+          <div class="col-12 col-lg-7">
+            <h2 class="h3 mb-1 section-title">Khách hàng nói gì</h2>
+            <p class="text-secondary mb-0">Cảm nhận của các “sen” về PawMart.</p>
+          </div>
+        </div>
+
+        <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                      <p class="mb-2">“Spa sạch sẽ, nhân viên nhẹ nhàng, thú cưng hợp tác hơn hẳn.”</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="fw-semibold">Minh A.</span>
+                        <span class="badge text-bg-secondary">Grooming</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                      <p class="mb-2">“Mua đồ nhanh, tư vấn đúng nhu cầu, giá ổn.”</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="fw-semibold">Linh T.</span>
+                        <span class="badge text-bg-secondary">Supplies</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                      <p class="mb-2">“Thức ăn chất lượng, bé ăn ngon, lông mượt.”</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="fw-semibold">Quan P.</span>
+                        <span class="badge text-bg-secondary">Food</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                      <p class="mb-2">“Đồ chơi bền, ship nhanh, sẽ ủng hộ tiếp.”</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="fw-semibold">Trang N.</span>
+                        <span class="badge text-bg-secondary">Toys</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Trước</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Sau</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ (Accordion) -->
+    <section id="faq" class="py-5 bg-body-tertiary">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-9">
+            <h2 class="h3 mb-3 section-title">Hỏi đáp</h2>
+            <div class="accordion" id="faqAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOneBody" aria-expanded="true" aria-controls="faqOneBody">
+                    Đây có phải hệ thống đặt lịch thật không?
+                  </button>
+                </h2>
+                <div id="faqOneBody" class="accordion-collapse collapse show" aria-labelledby="faqOne" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Đây là trang demo responsive dùng Bootstrap 5 cho bài lab.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwoBody" aria-expanded="false" aria-controls="faqTwoBody">
+                    Mình có thể đặt theo nhu cầu riêng không?
+                  </button>
+                </h2>
+                <div id="faqTwoBody" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Có — dùng form liên hệ và cho shop biết loại thú cưng, ngân sách và nhu cầu của bạn.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThreeBody" aria-expanded="false" aria-controls="faqThreeBody">
+                    Trang có hỗ trợ điện thoại không?
+                  </button>
+                </h2>
+                <div id="faqThreeBody" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Có — bố cục dùng Bootstrap grid và các component responsive.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact (Content section + Contact form) -->
+    <section id="contact" class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-lg-5">
+            <h2 class="h3 mb-2 section-title">Liên hệ PawMart</h2>
+            <p class="text-secondary">
+              Gửi thông tin, shop sẽ tư vấn sản phẩm hoặc sắp lịch hẹn.
+            </p>
+
+              <div class="alert alert-primary" role="alert">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <div class="fw-semibold">Hotline</div>
+                  <div class="small">(+84) 0900 000 000</div>
+                </div>
+                <a class="btn btn-outline-primary btn-sm" href="tel:+84900000000">Gọi</a>
+              </div>
+            </div>
+
+            <div class="list-group">
+              <div class="list-group-item d-flex justify-content-between align-items-center">
+                Thời gian phản hồi
+                <span class="badge text-bg-success rounded-pill">~ 2 hours</span>
+              </div>
+              <div class="list-group-item d-flex justify-content-between align-items-center">
+                Thanh toán
+                <span class="badge text-bg-secondary rounded-pill">Bank / Card</span>
+              </div>
+              <div class="list-group-item d-flex justify-content-between align-items-center">
+                Hỗ trợ
+                <span class="badge text-bg-secondary rounded-pill">24/7</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-7">
+            <div class="card shadow-sm border-0">
+              <div class="card-body">
+                <form id="contactForm" class="row g-3" novalidate>
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="fullName">Full name</label>
+                    <input id="fullName" class="form-control" type="text" placeholder="Nguyễn Văn A" required />
+                    <div class="invalid-feedback">Vui lòng nhập họ tên.</div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="email">Email</label>
+                    <input id="email" class="form-control" type="email" placeholder="name@example.com" required />
+                    <div class="invalid-feedback">Vui lòng nhập email hợp lệ.</div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="phone">Phone</label>
+                    <input id="phone" class="form-control" type="tel" placeholder="0900 000 000" />
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="trip">Bạn quan tâm</label>
+                    <input id="trip" class="form-control" type="text" placeholder="VD: Gói spa / Thức ăn / Phụ kiện" />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="message">Message</label>
+                    <textarea id="message" class="form-control" rows="4" placeholder="Cho shop biết loại thú cưng, ngày dự kiến và nhu cầu của bạn..." required></textarea>
+                    <div class="invalid-feedback">Vui lòng nhập nội dung.</div>
+                  </div>
+
+                  <div class="col-12 d-flex gap-2 flex-wrap">
+                    <button class="btn btn-primary" type="submit">Gửi</button>
+                    <button class="btn btn-outline-secondary" type="reset">Nhập lại</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white">
+      <div class="container">
+        <div class="row g-3 align-items-center">
+          <div class="col-12 col-md-6">
+            <div class="fw-semibold">PawMart</div>
+            <div class="small opacity-75">Trang PetShop responsive Bootstrap 5.</div>
+          </div>
+          <div class="col-12 col-md-6 text-md-end">
+            <a class="link-light link-underline-opacity-0 me-3" href="#top">Lên đầu trang</a>
+            <span class="small opacity-75">© 2026</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Booking Modal (component: Modal) -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="bookingModalLabel">Yêu cầu nhanh</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="bookingForm" class="row g-2">
+              <div class="col-12">
+                <label class="form-label" for="bookingTrip">Sản phẩm / dịch vụ</label>
+                <input id="bookingTrip" class="form-control" type="text" placeholder="Bạn cần gì?" required />
+              </div>
+              <div class="col-6">
+                <label class="form-label" for="bookingGuests">Số lượng</label>
+                <input id="bookingGuests" class="form-control" type="number" min="1" value="1" required />
+              </div>
+              <div class="col-6">
+                <label class="form-label" for="bookingDate">Ngày dự kiến</label>
+                <input id="bookingDate" class="form-control" type="date" required />
+              </div>
+              <div class="col-12 d-grid mt-2">
+                <button class="btn btn-primary" type="submit">Gửi yêu cầu</button>
+              </div>
+            </form>
+            <p class="small text-secondary mb-0 mt-2">Demo — xác nhận bằng thông báo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast (component: Toast) -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="actionToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto">PawMart</strong>
+          <small>Vừa xong</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="actionToastBody">Done.</div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
