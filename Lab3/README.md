@@ -1,33 +1,46 @@
-# Lab 3 — PawMart (PetShop Landing Page)
+Lab 3 — PawMart (Pet Shop Landing Page)
+Description
+Lab 3 is a single-page landing page simulating the PawMart pet store. It features a responsive design built with Bootstrap 5. The project focuses on fundamental UI/UX layouts, including clear navigation, sectioned content, interactive forms, and common web interface components.
 
-## Mô tả
-Lab 3 là một trang web 1 trang (landing page) mô phỏng cửa hàng thú cưng **PawMart**, thiết kế **responsive** và xây dựng bằng **Bootstrap 5**. Trang tập trung vào bố cục UI/UX cơ bản: điều hướng rõ ràng, nội dung theo section, form tương tác và các thành phần giao diện phổ biến.
+Technologies Used
+HTML5
 
-## Công nghệ sử dụng
-- HTML5
-- CSS3
-- JavaScript
-- Bootstrap 5 (CDN)
+CSS3
 
-## Các phần chính trong trang
-- **Navbar + Offcanvas**: menu cho desktop và menu trượt cho mobile.
-- **Hero section**: tiêu đề, CTA và form “Tìm nhanh” (select, date, number).
-- **Thú cưng nổi bật**: hiển thị bằng card + nút mở modal.
-- **Sản phẩm bán chạy**: carousel sản phẩm (có indicators + điều hướng).
-- **Đánh giá**: carousel review.
-- **FAQ**: accordion hỏi đáp.
-- **Liên hệ**: contact form (validate) + thông tin hotline.
-- **Modal “Yêu cầu nhanh”**: tự điền nội dung theo nút bấm.
-- **Toast**: hiển thị thông báo xác nhận hành động (demo).
+JavaScript
 
-## Cấu trúc thư mục
-- `index.html`: trang chính
-- `css/styles.css`: tuỳ biến giao diện
-- `js/main.js`: xử lý tương tác (form, modal, toast)
+Bootstrap 5 (CDN)
 
-## Cách chạy
-1. Mở file `index.html` bằng trình duyệt.
-2. Hoặc dùng VS Code Live Server để xem nhanh và tiện reload.
+Key Features
+Navbar + Offcanvas: Responsive menu for desktop and a sliding sidebar for mobile devices.
 
-## Ghi chú
-Đây là trang **demo phục vụ bài lab** (không kết nối backend / không lưu dữ liệu thật).
+Hero Section: Features a catchy headline, Call-to-Action (CTA), and a "Quick Search" form (select, date, and number inputs).
+
+Featured Pets: Displayed via cards with buttons to trigger detailed Modals.
+
+Best Sellers: An interactive Product Carousel (including indicators and navigation controls).
+
+Testimonials: A dedicated carousel for customer reviews.
+
+FAQ: An Accordion component for frequently asked questions.
+
+Contact Us: A validated contact form alongside hotline information.
+
+"Quick Request" Modal: A dynamic modal that auto-fills content based on the clicked button.
+
+Toasts: Demo notifications to confirm user actions.
+
+Directory Structure
+index.html: The main landing page file.
+
+css/styles.css: Custom UI styling.
+
+js/main.js: Logic for interactions (forms, modals, and toasts).
+
+How to Run
+Open the index.html file directly in any web browser.
+
+Alternatively, use the VS Code Live Server extension for real-time preview and automatic reloading.
+
+Notes
+This is a demo page created for lab purposes. It does not include a backend connection, and no real data is stored.
