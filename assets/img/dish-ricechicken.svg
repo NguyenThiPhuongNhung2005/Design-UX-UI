@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-label="Cơm gà xối mỡ">
+  <rect width="1000" height="650" rx="40" fill="#f8f9fa"/>
+
+  <g transform="translate(150 150)">
+    <circle cx="380" cy="240" r="240" fill="#0d6efd" opacity="0.08"/>
+
+    <g transform="translate(70 70)">
+      <ellipse cx="360" cy="320" rx="300" ry="92" fill="#ffffff" stroke="#dee2e6"/>
+      <ellipse cx="360" cy="310" rx="250" ry="70" fill="#0d6efd" opacity="0.06"/>
+
+      <g opacity="0.60" fill="#ffc107">
+        <circle cx="250" cy="300" r="12"/>
+        <circle cx="290" cy="320" r="10"/>
+        <circle cx="330" cy="295" r="11"/>
+        <circle cx="370" cy="318" r="10"/>
+        <circle cx="410" cy="298" r="12"/>
+        <circle cx="450" cy="320" r="10"/>
+      </g>
+
+      <path d="M200 220c70-110 230-120 300-10 55 85 35 170-10 210-64 58-210 50-260-40-34-62-44-110-30-160z" fill="#fd7e14" opacity="0.70"/>
+      <path d="M230 235c55-86 180-92 235-8 44 66 30 132-8 163-50 40-160 36-200-32-26-45-34-80-27-123z" fill="#fd7e14" opacity="0.88"/>
+
+      <g opacity="0.55" fill="#198754">
+        <circle cx="520" cy="270" r="10"/>
+        <circle cx="540" cy="300" r="9"/>
+        <circle cx="500" cy="300" r="9"/>
+      </g>
+
+      <g transform="translate(560 140)">
+        <rect x="0" y="0" width="160" height="90" rx="30" fill="#ffffff" stroke="#dee2e6"/>
+        <rect x="24" y="24" width="112" height="12" rx="6" fill="#0d6efd" opacity="0.25"/>
+        <rect x="24" y="46" width="80" height="10" rx="5" fill="#0d6efd" opacity="0.16"/>
+      </g>
+    </g>
+  </g>
+</svg>

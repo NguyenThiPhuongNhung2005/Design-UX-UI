@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thực đơn — WFood</title>
+  <meta name="description" content="Thực đơn demo — WFood." />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="index.html">
+        <i class="bi bi-bag-heart-fill text-primary me-1" aria-hidden="true"></i>
+        WFood
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Mở menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="menu.html">Thực đơn</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
+        </ul>
+        <div class="d-flex ms-lg-3 gap-2">
+          <a class="btn btn-outline-primary" href="contact.html">Đặt hàng</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <header class="py-5 bg-body-tertiary border-bottom">
+      <div class="container">
+        <div class="row align-items-end g-3">
+          <div class="col-12 col-lg-8">
+            <h1 class="display-6 fw-bold mb-2">Thực đơn</h1>
+            <p class="text-body-secondary mb-0">Các món dưới đây là nội dung demo để thể hiện lưới, thẻ (card) và modal tương tác.</p>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="input-group">
+              <span class="input-group-text" id="searchLabel"><i class="bi bi-search" aria-hidden="true"></i></span>
+              <input id="menuSearch" type="search" class="form-control" placeholder="Tìm món (demo)" aria-label="Tìm món" aria-describedby="searchLabel" />
+            </div>
+            <div class="form-text">Tìm kiếm lọc theo tên món (JS đơn giản).</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-3" id="menuGrid">
+          <div class="col-12 col-sm-6 col-lg-3" data-name="Burger bò phô mai">
+            <div class="card h-100">
+              <img class="card-img-top" src="assets/img/photos/burger.jpg" alt="Burger bò phô mai" loading="lazy" />
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex align-items-start justify-content-between gap-2">
+                  <h2 class="h6 mb-1">Burger bò phô mai</h2>
+                  <span class="badge text-bg-primary">Hot</span>
+                </div>
+                <p class="text-body-secondary small mb-3">Bò xay, phô mai, rau, sốt đặc trưng.</p>
+                <div class="mt-auto d-flex align-items-center justify-content-between">
+                  <span class="fw-semibold">79.000đ</span>
+                  <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#dishModal"
+                    data-dish-title="Burger bò phô mai"
+                    data-dish-price="79.000đ"
+                    data-dish-desc="Bò xay, phô mai, rau, sốt đặc trưng."
+                    data-dish-img="assets/img/photos/burger.jpg">Xem chi tiết</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3" data-name="Gà rán giòn">
+            <div class="card h-100">
+              <img class="card-img-top" src="assets/img/photos/chicken.jpg" alt="Gà rán giòn" loading="lazy" />
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex align-items-start justify-content-between gap-2">
+                  <h2 class="h6 mb-1">Gà rán giòn</h2>
+                  <span class="badge text-bg-success">Mới</span>
+                </div>
+                <p class="text-body-secondary small mb-3">Gà ướp, chiên giòn, sốt cay nhẹ.</p>
+                <div class="mt-auto d-flex align-items-center justify-content-between">
+                  <span class="fw-semibold">59.000đ</span>
+                  <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#dishModal"
+                    data-dish-title="Gà rán giòn"
+                    data-dish-price="59.000đ"
+                    data-dish-desc="Gà ướp, chiên giòn, sốt cay nhẹ."
+                    data-dish-img="assets/img/photos/chicken.jpg">Xem chi tiết</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3" data-name="Mì Ý sốt bò">
+            <div class="card h-100">
+              <img class="card-img-top" src="assets/img/photos/pasta.jpg" alt="Mì Ý sốt bò" loading="lazy" />
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex align-items-start justify-content-between gap-2">
+                  <h2 class="h6 mb-1">Mì Ý sốt bò</h2>
+                  <span class="badge text-bg-secondary">No.1</span>
+                </div>
+                <p class="text-body-secondary small mb-3">Sợi mì dai, sốt bò đậm đà.</p>
+                <div class="mt-auto d-flex align-items-center justify-content-between">
+                  <span class="fw-semibold">69.000đ</span>
+                  <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#dishModal"
+                    data-dish-title="Mì Ý sốt bò"
+                    data-dish-price="69.000đ"
+                    data-dish-desc="Sợi mì dai, sốt bò đậm đà."
+                    data-dish-img="assets/img/photos/pasta.jpg">Xem chi tiết</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3" data-name="Trà sữa trân châu">
+            <div class="card h-100">
+              <img class="card-img-top" src="assets/img/photos/milktea.jpg" alt="Trà sữa trân châu" loading="lazy" />
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex align-items-start justify-content-between gap-2">
+                  <h2 class="h6 mb-1">Trà sữa trân châu</h2>
+                  <span class="badge text-bg-warning">Deal</span>
+                </div>
+                <p class="text-body-secondary small mb-3">Ngọt vừa, thơm béo, trân châu dai.</p>
+                <div class="mt-auto d-flex align-items-center justify-content-between">
+                  <span class="fw-semibold">35.000đ</span>
+                  <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#dishModal"
+                    data-dish-title="Trà sữa trân châu"
+                    data-dish-price="35.000đ"
+                    data-dish-desc="Ngọt vừa, thơm béo, trân châu dai."
+                    data-dish-img="assets/img/photos/milktea.jpg">Xem chi tiết</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3" data-name="Cơm gà xối mỡ">
+            <div class="card h-100">
+              <img class="card-img-top" src="assets/img/photos/ricechicken.jpg" alt="Cơm gà xối mỡ" loading="lazy" />
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex align-items-start justify-content-between gap-2">
+                  <h2 class="h6 mb-1">Cơm gà xối mỡ</h2>
+                  <span class="badge text-bg-primary">Hot</span>
+                </div>
+                <p class="text-body-secondary small mb-3">Gà giòn da, cơm thơm, dưa chua.</p>
+                <div class="mt-auto d-flex align-items-center justify-content-between">
+                  <span class="fw-semibold">49.000đ</span>
+                  <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#dishModal"
+                    data-dish-title="Cơm gà xối mỡ"
+                    data-dish-price="49.000đ"
+                    data-dish-desc="Gà giòn da, cơm thơm, dưa chua."
+                    data-dish-img="assets/img/photos/ricechicken.jpg">Xem chi tiết</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3" data-name="Salad ức gà">
+            <div class="card h-100">
+              <img class="card-img-top" src="assets/img/photos/salad.jpg" alt="Salad ức gà" loading="lazy" />
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex align-items-start justify-content-between gap-2">
+                  <h2 class="h6 mb-1">Salad ức gà</h2>
+                  <span class="badge text-bg-success">Fit</span>
+                </div>
+                <p class="text-body-secondary small mb-3">Rau tươi, ức gà áp chảo, sốt mè.</p>
+                <div class="mt-auto d-flex align-items-center justify-content-between">
+                  <span class="fw-semibold">45.000đ</span>
+                  <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#dishModal"
+                    data-dish-title="Salad ức gà"
+                    data-dish-price="45.000đ"
+                    data-dish-desc="Rau tươi, ức gà áp chảo, sốt mè."
+                    data-dish-img="assets/img/photos/salad.jpg">Xem chi tiết</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3" data-name="Pizza hải sản">
+            <div class="card h-100">
+              <img class="card-img-top" src="assets/img/photos/pizza.jpg" alt="Pizza hải sản" loading="lazy" />
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex align-items-start justify-content-between gap-2">
+                  <h2 class="h6 mb-1">Pizza hải sản</h2>
+                  <span class="badge text-bg-secondary">Chef</span>
+                </div>
+                <p class="text-body-secondary small mb-3">Hải sản, phô mai, đế mỏng giòn.</p>
+                <div class="mt-auto d-flex align-items-center justify-content-between">
+                  <span class="fw-semibold">129.000đ</span>
+                  <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#dishModal"
+                    data-dish-title="Pizza hải sản"
+                    data-dish-price="129.000đ"
+                    data-dish-desc="Hải sản, phô mai, đế mỏng giòn."
+                    data-dish-img="assets/img/photos/pizza.jpg">Xem chi tiết</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3" data-name="Combo 2 người">
+            <div class="card h-100">
+              <img class="card-img-top" src="assets/img/photos/combo.jpg" alt="Combo 2 người" loading="lazy" />
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex align-items-start justify-content-between gap-2">
+                  <h2 class="h6 mb-1">Combo 2 người</h2>
+                  <span class="badge text-bg-warning">-10%</span>
+                </div>
+                <p class="text-body-secondary small mb-3">Burger + gà rán + 2 nước.</p>
+                <div class="mt-auto d-flex align-items-center justify-content-between">
+                  <span class="fw-semibold">159.000đ</span>
+                  <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#dishModal"
+                    data-dish-title="Combo 2 người"
+                    data-dish-price="159.000đ"
+                    data-dish-desc="Burger + gà rán + 2 nước."
+                    data-dish-img="assets/img/photos/combo.jpg">Xem chi tiết</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-top py-4">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-2">
+        <div class="text-body-secondary small">© <span id="year"></span> WFood. Demo cho Lab 6.</div>
+        <ul class="nav small">
+          <li class="nav-item"><a class="nav-link px-2 text-body-secondary" href="index.html">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link px-2 text-body-secondary" href="menu.html">Thực đơn</a></li>
+          <li class="nav-item"><a class="nav-link px-2 text-body-secondary" href="contact.html">Liên hệ</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="dishModal" tabindex="-1" aria-labelledby="dishModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="dishModalLabel">Chi tiết món</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <img id="dishModalImg" class="img-fluid rounded" src="assets/img/photos/burger.jpg" alt="" />
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="d-flex align-items-start justify-content-between gap-2">
+                <h2 class="h4 mb-1" id="dishModalTitle">—</h2>
+                <span class="badge text-bg-primary" id="dishModalPrice">—</span>
+              </div>
+              <p class="text-body-secondary" id="dishModalDesc">—</p>
+              <div class="card bg-body-tertiary border-0">
+                <div class="card-body">
+                  <div class="fw-semibold mb-1">Gợi ý (demo)</div>
+                  <ul class="mb-0 small text-body-secondary">
+                    <li>Thêm ghi chú: ít đá / ít cay / không hành…</li>
+                    <li>Chuyển sang trang Liên hệ để gửi yêu cầu đặt món.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a class="btn btn-primary" href="contact.html">Đặt món này</a>
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Đóng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
