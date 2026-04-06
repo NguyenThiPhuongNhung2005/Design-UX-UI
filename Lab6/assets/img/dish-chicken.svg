@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-label="Gà rán giòn">
+  <rect width="1000" height="650" rx="40" fill="#f8f9fa"/>
+
+  <g transform="translate(160 140)">
+    <circle cx="240" cy="240" r="220" fill="#0d6efd" opacity="0.08"/>
+    <circle cx="520" cy="260" r="180" fill="#0d6efd" opacity="0.06"/>
+
+    <g transform="translate(80 90)">
+      <path d="M190 30c60 0 100 35 110 85 6 30 30 46 60 58 35 14 55 42 55 78 0 65-65 118-170 118-120 0-220-70-220-160 0-92 70-179 165-179z" fill="#fd7e14" opacity="0.65"/>
+      <path d="M210 50c50 0 82 28 90 66 5 24 24 36 48 45 27 11 43 32 43 60 0 52-54 96-142 96-100 0-184-58-184-132 0-76 58-135 145-135z" fill="#fd7e14" opacity="0.85"/>
+
+      <g opacity="0.65" fill="#ffc107">
+        <circle cx="130" cy="130" r="18"/>
+        <circle cx="210" cy="110" r="14"/>
+        <circle cx="280" cy="150" r="16"/>
+        <circle cx="170" cy="200" r="14"/>
+        <circle cx="240" cy="210" r="12"/>
+      </g>
+
+      <g transform="translate(330 210)">
+        <rect x="0" y="0" width="160" height="90" rx="30" fill="#ffffff" stroke="#dee2e6"/>
+        <rect x="24" y="24" width="112" height="12" rx="6" fill="#198754" opacity="0.30"/>
+        <rect x="24" y="46" width="80" height="10" rx="5" fill="#198754" opacity="0.20"/>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(70 60)" opacity="0.65">
+    <rect x="0" y="0" width="310" height="50" rx="25" fill="#0d6efd" opacity="0.10"/>
+    <rect x="24" y="18" width="200" height="12" rx="6" fill="#0d6efd" opacity="0.22"/>
+  </g>
+</svg>

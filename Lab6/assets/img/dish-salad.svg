@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-label="Salad ức gà">
+  <rect width="1000" height="650" rx="40" fill="#f8f9fa"/>
+
+  <g transform="translate(150 150)">
+    <circle cx="380" cy="240" r="240" fill="#198754" opacity="0.08"/>
+
+    <g transform="translate(80 80)">
+      <ellipse cx="340" cy="320" rx="290" ry="90" fill="#ffffff" stroke="#dee2e6"/>
+      <ellipse cx="340" cy="310" rx="240" ry="68" fill="#198754" opacity="0.06"/>
+
+      <g opacity="0.70" fill="#198754">
+        <path d="M180 260c45-70 110-85 150-30 30 40 20 90-20 120-50 38-120 6-130-38-6-22-4-36 0-52z"/>
+        <path d="M300 240c50-60 120-60 150 0 24 48 10 100-36 125-55 30-120-10-122-55-1-24 2-44 8-70z" opacity="0.75"/>
+        <path d="M450 260c40-70 105-78 140-25 26 40 16 92-18 116-46 34-112 10-122-30-5-20-5-36 0-61z" opacity="0.85"/>
+      </g>
+
+      <g opacity="0.65" fill="#ffc107">
+        <circle cx="240" cy="320" r="14"/>
+        <circle cx="300" cy="300" r="12"/>
+        <circle cx="410" cy="310" r="13"/>
+        <circle cx="470" cy="325" r="11"/>
+      </g>
+
+      <g opacity="0.50" fill="#6c757d">
+        <rect x="290" y="275" width="120" height="34" rx="17"/>
+        <rect x="260" y="330" width="150" height="30" rx="15"/>
+      </g>
+
+      <g transform="translate(560 140)">
+        <rect x="0" y="0" width="160" height="90" rx="30" fill="#ffffff" stroke="#dee2e6"/>
+        <rect x="24" y="24" width="112" height="12" rx="6" fill="#0d6efd" opacity="0.25"/>
+        <rect x="24" y="46" width="80" height="10" rx="5" fill="#0d6efd" opacity="0.16"/>
+      </g>
+    </g>
+  </g>
+</svg>

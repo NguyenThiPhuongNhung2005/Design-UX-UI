@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-label="Combo 2 người">
+  <rect width="1000" height="650" rx="40" fill="#f8f9fa"/>
+
+  <g transform="translate(150 130)">
+    <circle cx="370" cy="280" r="250" fill="#0d6efd" opacity="0.07"/>
+
+    <g transform="translate(60 60)">
+      <rect x="40" y="210" width="260" height="180" rx="30" fill="#ffffff" stroke="#dee2e6"/>
+      <rect x="72" y="244" width="196" height="14" rx="7" fill="#0d6efd" opacity="0.22"/>
+      <rect x="72" y="270" width="136" height="12" rx="6" fill="#0d6efd" opacity="0.14"/>
+
+      <g transform="translate(350 70)">
+        <path d="M0 120c0-70 88-120 180-120s180 50 180 120" fill="#ffc107" opacity="0.55"/>
+        <path d="M0 120c0-56 88-104 180-104s180 48 180 104" fill="#ffc107" opacity="0.78"/>
+        <rect x="40" y="132" width="280" height="20" rx="10" fill="#198754" opacity="0.42"/>
+        <rect x="30" y="154" width="300" height="48" rx="24" fill="#6c757d" opacity="0.45"/>
+        <path d="M28 206c40 52 102 82 152 82s112-30 152-82" fill="#ffc107" opacity="0.70"/>
+      </g>
+
+      <g transform="translate(110 40)">
+        <rect x="0" y="0" width="170" height="170" rx="34" fill="#ffffff" stroke="#dee2e6"/>
+        <path d="M50 24h70l-12 120H62L50 24z" fill="#ffc107" opacity="0.22"/>
+        <g fill="#6c757d" opacity="0.55">
+          <circle cx="70" cy="132" r="12"/>
+          <circle cx="98" cy="142" r="10"/>
+          <circle cx="120" cy="132" r="11"/>
+        </g>
+      </g>
+
+      <g transform="translate(580 300)">
+        <rect x="0" y="0" width="220" height="92" rx="22" fill="#0d6efd" opacity="0.10"/>
+        <rect x="26" y="26" width="168" height="12" rx="6" fill="#0d6efd" opacity="0.25"/>
+        <rect x="26" y="46" width="108" height="10" rx="5" fill="#0d6efd" opacity="0.18"/>
+      </g>
+    </g>
+  </g>
+</svg>

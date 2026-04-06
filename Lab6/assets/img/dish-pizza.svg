@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-label="Pizza hải sản">
+  <rect width="1000" height="650" rx="40" fill="#f8f9fa"/>
+
+  <g transform="translate(180 120)">
+    <circle cx="320" cy="300" r="260" fill="#0d6efd" opacity="0.07"/>
+
+    <g transform="translate(40 40)">
+      <circle cx="320" cy="320" r="250" fill="#ffc107" opacity="0.35"/>
+      <circle cx="320" cy="320" r="220" fill="#fd7e14" opacity="0.20"/>
+
+      <g opacity="0.55" fill="#dc3545">
+        <circle cx="250" cy="260" r="18"/>
+        <circle cx="360" cy="300" r="16"/>
+        <circle cx="290" cy="380" r="17"/>
+        <circle cx="400" cy="410" r="15"/>
+      </g>
+
+      <g opacity="0.55" fill="#198754">
+        <circle cx="320" cy="240" r="10"/>
+        <circle cx="420" cy="330" r="10"/>
+        <circle cx="230" cy="350" r="10"/>
+      </g>
+
+      <g opacity="0.55" fill="#6c757d">
+        <path d="M320 320l190-70c35 110-10 230-110 290z"/>
+        <circle cx="420" cy="290" r="12"/>
+        <circle cx="450" cy="330" r="10"/>
+      </g>
+
+      <path d="M320 320l190-70" stroke="#ffffff" stroke-opacity="0.55" stroke-width="8" stroke-linecap="round"/>
+      <path d="M320 320l-140 160" stroke="#ffffff" stroke-opacity="0.55" stroke-width="8" stroke-linecap="round"/>
+      <path d="M320 320l-20-220" stroke="#ffffff" stroke-opacity="0.55" stroke-width="8" stroke-linecap="round"/>
+
+      <g transform="translate(520 140)">
+        <rect x="0" y="0" width="160" height="90" rx="30" fill="#ffffff" stroke="#dee2e6"/>
+        <rect x="24" y="24" width="112" height="12" rx="6" fill="#0d6efd" opacity="0.25"/>
+        <rect x="24" y="46" width="80" height="10" rx="5" fill="#0d6efd" opacity="0.16"/>
+      </g>
+    </g>
+  </g>
+</svg>
