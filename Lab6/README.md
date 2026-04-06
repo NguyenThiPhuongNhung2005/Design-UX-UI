@@ -1,22 +1,32 @@
-# Lab 6: WFood
+# Lab 6 - WFood
 
-## Project Overview
+## Project Introduction
 
-WFood is a static multi page website that simulates a modern food ordering service. This project was created for Lab 6 to practice interface design, responsive layout building, visual hierarchy, and simple front end interaction using Bootstrap and vanilla JavaScript.
+WFood is a static website that simulates a fast food ordering service. It was created for Lab 6 with the goal of practicing web interface design, multi page layout organization, responsive structure, and basic interactive behavior using JavaScript.
 
-The website is designed as a small but complete demo product. It includes a home page, a menu page, and a contact and order page. The main idea is to present a realistic food delivery brand with a clean user experience, attractive food imagery, and clear interaction flow from browsing to submitting an order request.
+The website is built as a small demo product with three main pages: a home page, a menu page, and a contact and ordering page. The overall focus of the project is to present a clean and modern food delivery interface that works well on both desktop and mobile devices.
 
-## Project Goals
+## Website Goals
 
-This website was built to achieve several learning and design objectives. First, it demonstrates how a food service landing page can be structured in a way that is easy to scan and visually appealing. Second, it applies Bootstrap components and grid layout to create a responsive interface across desktop, tablet, and mobile screens. Third, it adds lightweight client side interaction such as menu filtering, modal based detail viewing, and form validation. Finally, it keeps the project structure organized by separating HTML, CSS, JavaScript, and media assets into dedicated folders.
+The website was designed to simulate a simple and visually clear food ordering experience. The main goals are:
+
+- Present a food service website layout with strong visuals, clear content, and simple navigation.
+- Apply Bootstrap to build a responsive and consistent interface quickly.
+- Use JavaScript to create basic interactions such as menu filtering, dish detail modals, and demo form handling.
+- Keep the codebase organized by separating HTML, CSS, JavaScript, and asset files.
+- Practice UX and UI thinking with a focus on readability, accessibility, and ease of use.
 
 ## Target Users
 
-WFood is aimed at users who want to quickly explore available dishes, view featured items, and submit a basic order request. Since this is a demo project, the experience focuses on presentation and interaction rather than real order processing. There is no database, no live payment gateway, and no backend integration.
+The website is intended for users who want to quickly browse dishes, see featured items, and send a simple order request through a contact form. Since this is a demo project, no real data is stored and there is no actual checkout or payment processing.
 
 ## Technologies Used
 
-The project uses HTML5 for page structure, CSS3 for custom styling, Bootstrap 5.3.3 for layout and interface components, Bootstrap Icons for visual icons, and vanilla JavaScript for browser side interactions. This combination keeps the project lightweight while still allowing the interface to feel complete and interactive.
+- HTML5 for page structure and semantic content.
+- CSS3 for custom visual styling and brand identity.
+- Bootstrap 5.3.3 for grid layout, components, and responsive behavior.
+- Bootstrap Icons for interface icons.
+- Vanilla JavaScript for front end interaction.
 
 ## Folder Structure
 
@@ -52,60 +62,155 @@ Lab6/
       main.js
 ```
 
-## Page Details
+## Page Description
 
-### Home Page: `index.html`
+### 1. Home Page - `index.html`
 
-The home page introduces the WFood brand and creates the first visual impression. It contains a sticky navigation bar, a hero section with a strong headline and call to action buttons, a featured carousel for popular dishes, and a set of sections that explain the service highlights and the order process.
+The home page introduces WFood and creates the first impression for the user.
 
-From a UX perspective, this page is built to guide the user quickly toward browsing the menu. Large headings, clear button placement, supporting feature cards, and strong image presentation all work together to make the page easy to understand within a few seconds.
+Main components:
 
-### Menu Page: `menu.html`
+- A sticky top navigation bar for quick access to Home, Menu, and Contact.
+- A hero section with a large heading, short description, call to action buttons, and supporting imagery.
+- A featured dish carousel that highlights popular menu items.
+- A section presenting key service highlights such as fast delivery, careful packaging, and flexible payment.
+- A three step ordering explanation that helps users understand the basic flow.
+- A final call to action section that encourages users to continue to the menu page.
 
-The menu page displays the product catalog in a card based layout. Each dish card contains an image, item name, short description, status badge, and price. A search field at the top allows the user to filter dishes by name in real time. When a user clicks the detail button, a Bootstrap modal opens and displays more information about the selected dish.
+UX and UI value:
 
-This page focuses on browsing efficiency. The grid layout makes comparison easy, the cards are visually consistent, and the modal interaction allows users to inspect an item without leaving the page.
+- Creates a strong visual entry point with a large hero section and featured imagery.
+- Guides user behavior with clear call to action buttons.
+- Breaks content into readable sections so users can scan information quickly.
 
-### Contact Page: `contact.html`
+### 2. Menu Page - `menu.html`
 
-The contact page acts as a demo order request form. It includes service area information, contact details, a structured form with required fields, and a frequently asked questions section shown in an accordion layout.
+The menu page displays the list of demo dishes available on the website.
 
-The form asks for the customer name, phone number, address, order note, payment method, and preferred delivery time. Validation feedback is handled on the client side to show whether the required information is complete before displaying a success message.
+Main components:
 
-## Visual and UX Direction
+- A search input at the top for filtering dishes by name.
+- A product grid built with cards to display menu items visually.
+- Each dish card includes an image, title, status badge, short description, and price.
+- A “View Details” button that opens a modal with more information about the selected dish.
 
-The interface is designed with a warm, energetic, food related visual style. The color palette leans toward red and orange tones to suggest appetite, warmth, and speed. Soft gradients and subtle shadows are used to create depth without making the layout heavy. Rounded cards, large images, and generous spacing help the interface feel approachable and modern.
+UX and UI value:
 
-Typography is organized to support fast reading. Headlines are bold and clear, supporting text is softer in tone, and action buttons are placed where users naturally expect them. The design tries to balance promotional presentation with practical usability.
+- The grid structure makes dishes easy to compare.
+- Large food images improve visual appeal.
+- The modal avoids unnecessary page navigation and keeps the browsing flow smooth.
 
-## Responsive Behavior
+### 3. Contact and Order Page - `contact.html`
 
-WFood is built to adapt smoothly across different screen sizes. On desktop, the layout uses multiple columns to make full use of the wider space. On tablets, the card grid reduces the number of columns while preserving spacing and readability. On mobile devices, the navigation collapses, content stacks vertically, and action buttons remain easy to tap. This ensures that the project remains usable and visually balanced regardless of device width.
+The contact page acts as a simple demo order request area.
+
+Main components:
+
+- A short introduction about service area and hotline details.
+- An order form including full name, phone number, address, notes, payment method, and preferred time.
+- Basic Bootstrap validation for required input fields.
+- An accordion based FAQ section that answers common questions.
+
+UX and UI value:
+
+- The form is divided into clear input groups, making it easier to complete.
+- Validation feedback gives users direct visual guidance when information is missing.
+- The FAQ section helps explain the service without forcing users to leave the page.
+
+## Visual Style
+
+The visual style of WFood is designed to feel modern, friendly, and energetic.
+
+Main characteristics:
+
+- Warm red and orange tones are used to suggest food, speed, and appetite.
+- A light background combined with soft gradients adds depth to the layout.
+- Cards use large border radii, soft shadows, and generous spacing for a more open look.
+- Food imagery is placed prominently to increase visual interest.
+- Typography is clearly structured so headings, supporting text, and secondary information are easy to distinguish.
+
+## Responsive Design
+
+The website is designed to respond well across multiple screen sizes.
+
+On desktop:
+
+- Content is arranged into multiple columns where appropriate.
+- The hero section and dish cards make strong use of available width.
+
+On tablet:
+
+- The menu grid adapts to fewer columns while preserving spacing and readability.
+- Content sections remain balanced and easy to scan.
+
+On mobile:
+
+- The navigation collapses into a mobile friendly menu.
+- Buttons remain large enough to tap comfortably.
+- Content stacks vertically to support readability and scrolling.
 
 ## JavaScript Features
 
-The `assets/js/main.js` file handles the main interactive behavior of the site. It automatically updates the footer year so the copyright section stays current. It also powers the live search feature on the menu page by reading each card's `data-name` attribute and hiding non matching items.
+The `assets/js/main.js` file handles the main interactions of the website.
 
-Another important feature is the modal content injection on the menu page. When the user clicks a dish detail button, the script reads custom `data-*` attributes from that button and fills the modal with the correct title, description, price, and image. On the contact page, JavaScript works with Bootstrap validation classes to prevent invalid submission and display a demo success message after a valid form submission.
+### Automatic Footer Year
 
-## Strengths of the Project
+When a page loads, JavaScript inserts the current year into the footer so that the copyright text remains up to date.
 
-One of the strongest aspects of this project is its clarity. The navigation is straightforward, the content is divided into logical sections, and the interface stays consistent across all pages. Another strength is the balance between visual design and usability. The project is attractive enough to feel like a real service concept while still being simple enough to understand as a lab assignment.
+### Menu Filtering
 
-The site also shows a practical use of Bootstrap rather than relying on default components without structure. Layout, cards, modal, accordion, form styling, and responsive behavior all contribute to a complete front end exercise.
+Users can type into the search field on the menu page. The script reads each card's `data-name` value and shows or hides items based on whether they match the entered text.
+
+### Dish Detail Modal
+
+When the detail button is clicked, information such as the dish name, price, description, and image is read from `data-*` attributes and inserted into the Bootstrap modal.
+
+### Order Form Validation
+
+The contact page uses simple client side validation:
+
+- Prevent submission when required fields are empty.
+- Show Bootstrap validation feedback styles.
+- Display a demo success message and reset the form when the submission is valid.
+
+## Project Strengths
+
+- Clear structure that is easy to understand and navigate.
+- Consistent design language across all pages.
+- Practical use of Bootstrap components instead of relying only on default styling.
+- Basic interactivity that makes the website feel more dynamic.
+- Suitable for demonstrating UI, responsive layout, and client side interaction in a lab assignment.
 
 ## Current Limitations
 
-Because WFood is a demo website, several features are intentionally simplified. There is no real shopping cart, no persistent order storage, no authentication system, and no backend processing. The search is limited to front end filtering by dish name, and the order form only simulates submission. These limitations are acceptable for a lab project, but they also define the boundary between this demo and a production ready application.
+Because this is a demo project, there are still some limitations:
+
+- No real shopping cart.
+- No backend or database integration.
+- No actual order storage.
+- No user account system or login.
+- Search only filters front end content by dish name.
 
 ## Future Improvements
 
-If the project were expanded further, it could evolve into a more realistic food delivery platform. Natural next steps would include adding a real cart system, building a backend for order management, storing product data in a database, implementing user authentication, supporting online payment, and creating an administration panel for menu management. Additional filtering options such as category, price range, and popularity could also improve the browsing experience.
+If expanded into a more complete project, the website could include:
+
+- A real add to cart feature.
+- User login and account management.
+- Backend integration for storing orders.
+- Dish filtering by category, price, or status.
+- An admin page for managing menu items.
+- Online payment support.
+- Delivery tracking or API integration.
 
 ## How to Run the Project
 
-This is a static website, so it can be opened very easily. The simplest method is to open the `Lab6` folder and run `index.html` directly in a browser. A better development workflow is to use a local preview tool such as Live Server in VS Code so that page refresh and asset loading behave more consistently while editing.
+Because this is a static website, it can be run very easily:
+
+1. Open the `Lab6` folder in VS Code or a file manager.
+2. Open `index.html` directly in a browser.
+3. Or use a tool such as Live Server for a smoother local preview during development.
 
 ## Summary
 
-WFood is a complete Lab 6 front end demo that presents a fictional food ordering brand through a well structured multi page website. It combines Bootstrap based layout, custom CSS styling, and lightweight JavaScript interaction to demonstrate both interface design and practical front end implementation. The project is suitable for showcasing responsive design, user flow planning, and the presentation of a simple service product in a polished and understandable way.
+WFood is a Lab 6 project that demonstrates web interface design using Bootstrap together with HTML, CSS, and basic JavaScript. It shows how to build a multi page website with a clear UX direction, responsive structure, attractive presentation, and enough interaction to simulate a realistic food ordering concept.
